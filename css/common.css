@@ -1,0 +1,292 @@
+/* 
+ Основной файл стилей пользовательского интерфейса
+ 2017 © mk@ad-res.ru
+*/
+
+@import url("fonts.css");
+
+html, body { 
+	height: 100%; 
+	margin: 0;
+	padding: 0;
+	font-family: 'RobotoLight', 'Arial Narrow', sans-serif;
+	font-size: 13px;
+	color: Black;
+}
+
+body * { margin: 0; padding: 0; }
+
+h1, h2, h3, h4 {
+	font-family: 'RobotoBold', 'Arial Black', sans-serif;
+	letter-spacing: 0.03em;
+}
+h1 { margin: 32px 0 16px 0; font-size: 28px; text-align: center; }
+h2 { margin: 24px 0  8px 0; }
+h3 { margin: 16px 0  8px 0; }
+h4 { margin: 10px 0  4px 0; font-size: 16px; }
+
+input, select { padding: 3px 4px; }
+input[type=submit] { padding: 3px 8px; color: inherit; }
+input[type=submit]:disabled { color: #AAA; }
+input[type=submit]:hover { color: #000; }
+input[type=submit]:disabled:hover { color: #AAA; }
+p { margin: 16px 0; }
+
+a img { border:none; }
+
+ul { padding-left: 16px; }
+
+
+.wrap { 
+	min-height: 100%; 
+}
+
+.loginform {
+	width: 240px;
+	height: 160px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -80px 0 0 -120px;
+	padding: 10px;
+	text-align: center;
+}
+
+
+.header { 
+	display: table;
+	width: 1000px;
+	margin: 24px auto;
+}
+
+.header .logotype {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0;
+	width: 180px;
+}
+
+.header .slogan { 
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.header .slogan p {  }
+
+.header .slogan h4 { 
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+
+article { 
+	width: 1000px;
+	min-height: 100%;
+	margin: 0 auto;
+	padding-bottom: 68px; /* Do Not Delete! */
+}
+ 
+footer {
+	position: relative;
+	height: 64px;
+	margin-top: -88px;
+	font-size: 12px;
+	text-align: center;
+	color: #999;
+	background-color: #EEE;
+	clear:both;
+}
+
+footer p {
+	margin-top: 24px;
+	padding-top: 24px;
+}
+
+
+.pagetopstrip {
+	width: 728px;
+	height: 40px;
+	display: inline-block;
+	padding: 13px;
+	text-align: center;
+	font-family: 'RobotoLight', 'Arial Narrow', sans-serif;
+	font-size: 20px;
+	letter-spacing: 0.03em;
+}
+
+#frm_search {
+	width: 240px;
+	height: 40px;
+	float: right;
+	padding: 16px 0;
+	text-align: right;
+}
+#frm_search input[type=submit] {
+	float: right;
+	margin-left: 10px;
+}
+#frm_search input[name=f_name] {
+	width: 150px;
+	display: inline-block;
+}
+
+.frontpagecontacts {
+	position: relative;
+	margin-top: 100px;
+	text-align: center;
+}
+.frontpagecontacts p {
+	font-size: 1.5em;
+}
+
+
+
+/* Основной раздел */
+
+#leftcontainer {
+	width: 260px;
+	display: table-cell;
+	vertical-align: top;
+	/*background-color: azure;*/
+}
+
+#leftchild {
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#leftlist {
+	width: 240px;
+	display: table;
+	border-collapse: collapse;
+	line-height: 120%;
+}
+
+#centercontainer {
+	width: 740px;
+	display: table-cell;
+	padding-left: 4px;
+	/*background-color: cornsilk;*/
+}
+
+#centerchild {
+	width: 100%;
+	overflow-y: auto;
+}
+
+.fileslist { 
+	display: table;
+	table-layout: fixed; /* Чтобы непомещающийся текст обрезался ellipsis. Также нужна ширина. */
+	border-collapse: collapse;
+	font-size: 12px;
+	line-height: 120%; 
+}
+
+div.active { background-color: #EFE; }
+
+.pglc, .pglc_h, .pglc_id, .pglc_t, .pglc_o, .pglc_u, .pglc_d, .pglc_s, .proplc {
+	display: table-cell;
+	border: 1px solid #ddd;
+	padding: 4px 8px;
+	cursor: default;
+}
+
+.pglc_h { text-align: center; font-family: 'RobotoMedium', sans-serif; background-color: #FAFAFA; }
+.pglc_o { font-size: 12px; text-align: center; }
+.pglc_s { font-size: 11px; text-align: left; }
+.pglc_id { width: 28px; text-align: right; font-size: 14px; }
+.pglr, .pglrn, .pglrh { display: table-row; }
+.pglrn:hover { background-color: #FAFAFA; }
+.pglrn div { cursor: pointer; }
+.pglc_u, .pglc_d { width: 6px; cursor: pointer; }
+.pglc_t { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; -o-text-overflow: ellipsis; cursor: pointer; }
+
+.tacnt { text-align: center; }
+.targt { text-align: right; }
+.reglr { font-family: 'RobotoRegular', sans-serif; }
+.medm { font-family: 'RobotoMedium', sans-serif; }
+
+.w38  { width: 38px; }
+.w54  { width: 54px; }
+.w100 { width: 100px; }
+.w102 { width: 102px; }
+.w223 { width: 223px; }
+.w340 { width: 340px; }
+
+
+.tc_label { display: table-cell; text-align: right; }
+
+.fileslist th, .fileslist td { padding: 4px 8px; border: 1px solid #AAA; }
+.fileslist th { text-align: center; }
+
+.pretable { margin-bottom: 4px; }
+.pretable td { padding: 4px; }
+
+#leftcolblock {
+	float: left; 
+	width: 340px; 
+	max-height: 540px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin-right: 20px; 
+}
+
+#detailsblock {
+	display: inline-block;
+	width: 640px;
+}
+
+#formtitle {
+	width: 420px; 
+	float: left;
+	padding: 0 20px 20px 0;
+}
+
+#formtitle h2 { margin-top: 0px; }
+
+#progressbar {
+margin-top: 20px;
+}
+
+.progress-label {
+font-weight: bold;
+text-shadow: 1px 1px 0 #fff;
+}
+
+.ui-dialog-titlebar-close {
+display: none;
+}
+
+details summary {
+font-size: 1.5em;
+font-weight: bold;
+margin-bottom: 24px;
+}
+
+.inactive { color: #AAA; }
+
+#btn_save, #btn_del, #btn_add {
+	color: #FFF;
+	padding: 8px 16px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+}
+
+#btn_save:disabled, #btn_del:disabled, #btn_add:disabled,
+#btn_save:disabled:hover, #btn_del:disabled:hover, #btn_add:disabled:hover { 
+	background-color: #f4f5f5;
+	background-image: linear-gradient(to bottom, #f4f5f5, #dfdddd);
+	cursor: default;
+	color:#999;
+}
+
+#btn_save 		{ background-color: #4ba614; background-image: linear-gradient(to bottom, #4ba614, #008c00); }
+#btn_del  		{ background-color: #f62b2b; background-image: linear-gradient(to bottom, #f62b2b, #d20202); }
+#btn_add  		{ background-color: #3093c7; background-image: linear-gradient(to bottom, #3093c7, #1c5a85); }
+#btn_save:hover	{ background-color: #36780f; background-image: linear-gradient(to bottom, #36780f, #005900); }
+#btn_del:hover	{ background-color: #e40a0a; background-image: linear-gradient(to bottom, #e40a0a, #9f0202); }
+#btn_add:hover	{ background-color: #26759e; background-image: linear-gradient(to bottom, #26759e, #133d5b); }
+
